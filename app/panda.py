@@ -26,12 +26,26 @@ def save_memory(data):
 def show_memory():
     data = load_memory()
 
-    print("\n🐼 PANDA CORE MEMORY")
-    print("-------------------")
+    print("\n🐼 PANDA MEMORY VAULT")
+    print("--------------------")
+
+    count = 1
 
     for memory in data["memories"]:
-        print(f"\n{memory['title']}")
-        print(memory["content"])
+
+        memory_type = memory.get("type", "memory")
+
+        if memory_type == "creator_idea":
+            icon = "🎮"
+            label = "Creator Idea"
+        else:
+            icon = "🧠"
+            label = "Memory"
+
+        print(f"\n{count}. {icon} {label}")
+        print(f"   {memory['content']}")
+
+        count += 1
 
 
 def add_memory(content):
