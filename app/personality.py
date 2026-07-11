@@ -26,3 +26,22 @@ UNKNOWN_COMMAND = (
 GOODBYE_MESSAGE = (
     "🐼 See you later, Manny. Keep building something awesome."
 )
+
+CREATOR_MESSAGE = """
+🐼 Creator Mode activated.
+
+Let's turn your ideas into content people want to watch.
+"""
+
+BUILDING_MESSAGE = """
+🐼 One step at a time, Manny.
+
+Every feature we add makes Panda smarter.
+Every idea we save gets us closer to the goal.
+"""
+
+DASHBOARD_MESSAGE = """
+🐼 Here's where we stand, Manny.
+
+Keep building. Small progress becomes big results.
+"""

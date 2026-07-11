@@ -1,12 +1,15 @@
 from dashboard import show_dashboard
 from idea_vault import save_idea, show_ideas
 from creator import creator_mode
+from context import set_mode, show_mode
 from commands import show_commands
+from goal_tracker import show_progress, complete_video
 from content_generator import generate_content
 from personality import (
     WELCOME_MESSAGE,
     UNKNOWN_COMMAND,
     GOODBYE_MESSAGE,
+    BUILDING_MESSAGE,
 )
 import json
 from pathlib import Path
@@ -75,6 +78,7 @@ def add_memory(content):
 def start_panda():
 
     print(WELCOME_MESSAGE)
+    print(BUILDING_MESSAGE)
     print("Commands: remember | memories | exit")
 
     while True:
@@ -84,7 +88,8 @@ def start_panda():
         if user_input.lower() == "exit":
             print(GOODBYE_MESSAGE)
             break
-
+        elif user_input.lower() == "mode":
+            show_mode()
         elif user_input.lower().startswith("remember"):
             memory = user_input.replace("remember", "").strip()
             add_memory(memory)
@@ -96,14 +101,21 @@ def start_panda():
             show_commands()
         
         elif user_input.lower() == "creator":
+            set_mode("Creator")
             creator_mode()
         elif user_input.lower() == "generate":
             generate_content()
         elif user_input.lower() == "dashboard":
+            set_mode("Dashboard")
             show_dashboard()
         elif user_input.lower() == "idea":
             save_idea()
+        elif user_input.lower() == "progress":
+            show_progress()
 
+        elif user_input.lower() == "complete":
+            complete_video()
+        
         elif user_input.lower() == "ideas":
             show_ideas()
         else:
