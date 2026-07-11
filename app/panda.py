@@ -1,6 +1,7 @@
 from dashboard import show_dashboard
 from idea_vault import save_idea, show_ideas
 from creator import creator_mode
+from profile import show_profile
 from context import set_mode, show_mode
 from commands import show_commands
 from goal_tracker import show_progress, complete_video
@@ -93,7 +94,8 @@ def start_panda():
         elif user_input.lower().startswith("remember"):
             memory = user_input.replace("remember", "").strip()
             add_memory(memory)
-
+        elif user_input.lower() == "profile":
+            show_profile()
         elif user_input.lower() == "memories":
             show_memory()
         
