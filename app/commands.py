@@ -1,0 +1,15 @@
+COMMANDS = {
+    "remember": "Save a new memory",
+    "memories": "Show all memories",
+    "creator": "Creator Mode",
+    "business": "Business Mode",
+    "help": "Show available commands",
+    "exit": "Exit Panda"
+}
+
+
+def show_commands():
+    print("\n🐼 Available Commands\n")
+
+    for command, description in COMMANDS.items():
+        print(f"{command:<10} - {description}")

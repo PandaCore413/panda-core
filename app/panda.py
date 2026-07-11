@@ -1,3 +1,9 @@
+from commands import show_commands
+from personality import (
+    WELCOME_MESSAGE,
+    UNKNOWN_COMMAND,
+    GOODBYE_MESSAGE,
+)
 import json
 from pathlib import Path
 from datetime import datetime
@@ -45,9 +51,7 @@ def add_memory(content):
 
 def start_panda():
 
-    print("🐼 PANDA CORE ONLINE")
-    print("-------------------")
-    print("Hello Manny. What would you like me to do?")
+    print(WELCOME_MESSAGE)
     print("Commands: remember | memories | exit")
 
     while True:
@@ -55,7 +59,7 @@ def start_panda():
         user_input = input("\nYou: ")
 
         if user_input.lower() == "exit":
-            print("🐼 Panda: Shutting down. See you soon, Manny.")
+            print(GOODBYE_MESSAGE)
             break
 
         elif user_input.lower().startswith("remember"):
@@ -64,9 +68,11 @@ def start_panda():
 
         elif user_input.lower() == "memories":
             show_memory()
-
+        
+        elif user_input.lower() == "help":
+            show_commands()
         else:
-            print("🐼 Panda: I don't understand that yet, but I'm learning.")
+            print(UNKNOWN_COMMAND)
 
 
 if __name__ == "__main__":

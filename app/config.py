@@ -1,0 +1,8 @@
+APP_NAME = "PANDA CORE"
+VERSION = "0.2.0"
+
+OWNER = "Manny"
+
+CREATOR_MODE = True
+BUSINESS_MODE = True
+MEMORY_MODE = True
