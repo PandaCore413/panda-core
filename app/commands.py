@@ -3,6 +3,8 @@ COMMANDS = {
     "memories": "Show all memories",
     "creator": "Creator Mode",
     "business": "Business Mode",
+    "idea": "Save a creator idea",
+    "ideas": "Show creator ideas",
     "help": "Show available commands",
     "exit": "Exit Panda"
 }

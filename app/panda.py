@@ -1,3 +1,5 @@
+from idea_vault import save_idea, show_ideas
+from creator import creator_mode
 from commands import show_commands
 from personality import (
     WELCOME_MESSAGE,
@@ -71,6 +73,14 @@ def start_panda():
         
         elif user_input.lower() == "help":
             show_commands()
+        
+        elif user_input.lower() == "creator":
+            creator_mode()
+        elif user_input.lower() == "idea":
+            save_idea()
+
+        elif user_input.lower() == "ideas":
+            show_ideas()
         else:
             print(UNKNOWN_COMMAND)
 
