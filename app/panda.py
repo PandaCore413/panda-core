@@ -2,6 +2,7 @@ from dashboard import show_dashboard
 from idea_vault import save_idea, show_ideas
 from creator import creator_mode
 from commands import show_commands
+from content_generator import generate_content
 from personality import (
     WELCOME_MESSAGE,
     UNKNOWN_COMMAND,
@@ -96,6 +97,8 @@ def start_panda():
         
         elif user_input.lower() == "creator":
             creator_mode()
+        elif user_input.lower() == "generate":
+            generate_content()
         elif user_input.lower() == "dashboard":
             show_dashboard()
         elif user_input.lower() == "idea":
