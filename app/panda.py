@@ -1,3 +1,4 @@
+from dashboard import show_dashboard
 from idea_vault import save_idea, show_ideas
 from creator import creator_mode
 from commands import show_commands
@@ -49,6 +50,11 @@ def show_memory():
 
 
 def add_memory(content):
+
+    if not content.strip():
+        print("🐼 Panda: I can't save an empty memory.")
+        return
+
     data = load_memory()
 
     new_memory = {
@@ -90,6 +96,8 @@ def start_panda():
         
         elif user_input.lower() == "creator":
             creator_mode()
+        elif user_input.lower() == "dashboard":
+            show_dashboard()
         elif user_input.lower() == "idea":
             save_idea()
 

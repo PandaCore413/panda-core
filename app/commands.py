@@ -5,6 +5,7 @@ COMMANDS = {
     "business": "Business Mode",
     "idea": "Save a creator idea",
     "ideas": "Show creator ideas",
+    "dashboard": "Show Creator Dashboard",
     "help": "Show available commands",
     "exit": "Exit Panda"
 }
